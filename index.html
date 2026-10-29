@@ -13,12 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        stone: {
-                            50: '#FAFAF9',
-                            100: '#F5F5F4',
-                            200: '#E7E5E4',
-                            800: '#292524',
-                            900: '#1C1917',
+                        navy: {
+                            800: '#0F172A',
+                            900: '#0B0F19',
                         },
                         amber: {
                             600: '#D97706',
@@ -31,97 +28,95 @@
     </script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        .font-serif-elegant {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        .glass-card-light {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(231, 229, 228, 0.8);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
 
     <!-- NAVIGATION BAR -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
+    <nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-serif-elegant font-bold text-xl shadow-md shadow-amber-600/20">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-extrabold text-xl shadow-lg shadow-amber-500/20">
                     AB
                 </div>
                 <div>
-                    <span class="block font-bold text-lg text-stone-900 leading-tight">Aubrey Anne Binarao</span>
-                    <span class="block text-xs text-amber-700 font-medium tracking-wider uppercase">Real Estate VA</span>
+                    <span class="block font-bold text-lg text-white leading-tight">Aubrey Anne Binarao</span>
+                    <span class="block text-xs text-amber-400 font-medium tracking-wider uppercase">Real Estate VA</span>
                 </div>
             </a>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="text-stone-600 hover:text-amber-700 transition">About</a>
-                <a href="#skills" class="text-stone-600 hover:text-amber-700 transition">Skills & Tools</a>
-                <a href="#portfolio" class="text-stone-600 hover:text-amber-700 transition">Portfolio Samples</a>
-                <a href="#experience" class="text-stone-600 hover:text-amber-700 transition">Experience</a>
-                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-semibold transition shadow-md flex items-center gap-2">
-                    <i class="fa-regular fa-envelope text-xs"></i> Contact
+                <a href="#about" class="text-slate-300 hover:text-amber-400 transition">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-amber-400 transition">Skills & Tools</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-amber-400 transition">Portfolio Samples</a>
+                <a href="#experience" class="text-slate-300 hover:text-amber-400 transition">Experience</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition shadow-lg shadow-amber-600/20 flex items-center gap-2">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Hire Me
                 </a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden text-stone-700 hover:text-stone-900 focus:outline-none">
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
                 <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-3 bg-white border-b border-stone-200">
-            <a href="#about" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">About</a>
-            <a href="#skills" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Skills & Tools</a>
-            <a href="#portfolio" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Portfolio Samples</a>
-            <a href="#experience" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Experience</a>
-            <a href="#contact" class="block text-center py-3 rounded-xl bg-stone-900 text-white font-semibold shadow-md">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-3 bg-slate-900 border-b border-slate-800">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">About</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Skills & Tools</a>
+            <a href="#portfolio" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Portfolio Samples</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-amber-400 font-medium">Experience</a>
+            <a href="#contact" class="block text-center py-3 rounded-xl bg-amber-600 text-white font-semibold shadow-lg">Hire Me</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-stone-100 via-stone-50 to-stone-50">
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,6,0.15),transparent_50%)]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-600/20 text-amber-800 text-xs font-semibold tracking-wide uppercase">
-                        <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span> Available for Remote Opportunities
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Available for Remote Opportunities
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-elegant font-bold text-stone-900 tracking-tight leading-[1.15]">
-                        Elevating Real Estate Operations with <span class="italic text-amber-700">Precision & Elegance</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+                        Streamlining Real Estate Operations for <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Peak Performance</span>
                     </h1>
-                    <p class="text-lg text-stone-600 max-w-2xl leading-relaxed">
+                    <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
                         Detail-oriented Real Estate Virtual Assistant specializing in CRM data entry, transaction coordination workflows, MLS listing management, and client care. Dedicated to freeing up top-producing agents so they can focus on closing deals.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-2">
-                        <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition shadow-lg shadow-amber-600/20 flex items-center gap-2">
+                        <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition shadow-xl shadow-amber-600/25 flex items-center gap-2">
                             <i class="fa-solid fa-briefcase"></i> View Portfolio Work
                         </a>
-                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 font-semibold transition shadow-sm flex items-center gap-2">
-                            <i class="fa-regular fa-envelope"></i> Get Contact Details
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold transition flex items-center gap-2">
+                            <i class="fa-regular fa-envelope"></i> Get in Touch
                         </a>
                     </div>
-                    <div class="pt-6 grid grid-cols-3 gap-6 border-t border-stone-200 text-stone-500 text-sm">
+                    <div class="pt-6 grid grid-cols-3 gap-6 border-t border-slate-800 text-slate-400 text-sm">
                         <div>
-                            <span class="block text-2xl font-bold text-stone-900">100%</span>
+                            <span class="block text-2xl font-bold text-white">100%</span>
                             <span>SOP Compliance</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-bold text-stone-900">Sync2VA</span>
+                            <span class="block text-2xl font-bold text-white">Sync2VA</span>
                             <span>Certified Trainee</span>
                         </div>
                         <div>
-                            <span class="block text-2xl font-bold text-stone-900">24/7</span>
+                            <span class="block text-2xl font-bold text-white">24/7</span>
                             <span>Reliable Support</span>
                         </div>
                     </div>
@@ -129,27 +124,28 @@
 
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-md">
-                        <div class="glass-card-light rounded-3xl p-8 space-y-6 text-center shadow-xl shadow-stone-200/50">
-                            <div class="w-28 h-28 mx-auto rounded-full bg-stone-900 p-1 shadow-lg">
-                                <div class="w-full h-full rounded-full bg-amber-600 flex items-center justify-center text-3xl font-serif-elegant font-bold text-white">
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-amber-600 to-amber-400 opacity-30 blur-xl"></div>
+                        <div class="relative glass-card rounded-3xl p-8 space-y-6 text-center shadow-2xl">
+                            <div class="w-28 h-28 mx-auto rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 p-1 shadow-xl">
+                                <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-4xl font-extrabold text-amber-400">
                                     AB
                                 </div>
                             </div>
                             <div>
-                                <h3 class="text-2xl font-serif-elegant font-bold text-stone-900">Aubrey Anne Binarao</h3>
-                                <p class="text-amber-700 font-medium text-sm mt-1">Real Estate Virtual Assistant</p>
-                                <p class="text-stone-500 text-xs mt-2 flex items-center justify-center gap-1">
-                                    <i class="fa-solid fa-location-dot text-amber-600"></i> Tandag, Philippines
+                                <h3 class="text-2xl font-bold text-white">Aubrey Anne Binarao</h3>
+                                <p class="text-amber-400 font-medium text-sm mt-1">Real Estate Virtual Assistant</p>
+                                <p class="text-slate-400 text-xs mt-2 flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-location-dot text-amber-500"></i> Tandag, Philippines
                                 </p>
                             </div>
-                            <div class="pt-4 border-t border-stone-200 flex justify-center space-x-4">
-                                <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                            <div class="pt-4 border-t border-slate-800 flex justify-center space-x-4">
+                                <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
-                                <a href="mailto:aubreybinarao97@gmail.com" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                                <a href="mailto:aubreybinarao97@gmail.com" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow">
                                     <i class="fa-regular fa-envelope"></i>
                                 </a>
-                                <a href="tel:09631832618" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                                <a href="tel:09631832618" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow">
                                     <i class="fa-solid fa-phone"></i>
                                 </a>
                             </div>
@@ -161,43 +157,43 @@
     </header>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-20 bg-white border-t border-stone-200">
+    <section id="about" class="py-20 bg-slate-900/50 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Professional Summary</h2>
-                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
-                <p class="text-stone-600 text-base leading-relaxed">
-                    Dedicated administrative professional combining practical business management experience with specialized real estate virtual assistant training.
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Professional Summary</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-300 text-lg">
+                    Dedicated and rigorous administrative professional combining practical business management experience with specialized real estate virtual assistant training.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-stone-900">Transaction Accuracy</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
+                    <h3 class="text-xl font-bold text-white">Transaction Accuracy</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
                         Experienced in handling high-accuracy documentation, CRM record updates, and structured property data logs with strict compliance to SOPs.
                     </p>
                 </div>
 
-                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-headset"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-stone-900">Client Care & Comms</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
+                    <h3 class="text-xl font-bold text-white">Client Care & Comms</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
                         Skilled in managing client communications, coordinating property showings, and fielding inquiries with professional warmth and prompt follow-up.
                     </p>
                 </div>
 
-                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
-                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                <div class="glass-card p-8 rounded-2xl space-y-4 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-laptop-code"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-stone-900">Tech-Savvy Operations</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">
+                    <h3 class="text-xl font-bold text-white">Tech-Savvy Operations</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
                         Proficient across Google Workspace, MS Office, Canva marketing design, Zillow, Monday.com, and robust technical troubleshooting.
                     </p>
                 </div>
@@ -206,79 +202,79 @@
     </section>
 
     <!-- CORE SKILLS & TOOLS SECTION -->
-    <section id="skills" class="py-20 bg-stone-50 border-t border-stone-200">
+    <section id="skills" class="py-20 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Core Skills & Tools</h2>
-                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
-                <p class="text-stone-600 text-base">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Core Skills & Tools</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-300 text-lg">
                     Comprehensive competencies built through rigorous training and real-world operational execution.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Core Competencies -->
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
-                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-3">
-                        <i class="fa-solid fa-check-to-slot text-amber-600"></i> Core Real Estate Skills
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-check-to-slot text-amber-400"></i> Core Real Estate Skills
                     </h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">Real Estate Admin Support</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Real Estate Admin Support</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">Transaction Coordination</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Transaction Coordination</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">Property Listing & MLS</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Property Listing & MLS</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">CRM Data Entry & Leads</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">CRM Data Entry & Leads</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">Calendar & Showings</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Calendar & Showings</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
-                            <i class="fa-solid fa-circle-check text-amber-600"></i>
-                            <span class="text-sm font-medium text-stone-800">Email & Inbox Management</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-400"></i>
+                            <span class="text-sm font-medium text-slate-200">Email & Inbox Management</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tools & Technologies -->
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
-                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-3">
-                        <i class="fa-solid fa-toolbox text-amber-600"></i> Tools & Software Stack
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-3">
+                        <i class="fa-solid fa-toolbox text-amber-400"></i> Tools & Software Stack
                     </h3>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-brands fa-google text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Google Workspace</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-brands fa-google text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Google Workspace</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-solid fa-file-excel text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Microsoft Office</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-solid fa-file-excel text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Microsoft Office</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-solid fa-palette text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Canva Design</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-solid fa-palette text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Canva Design</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-solid fa-building text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Zillow.com</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-solid fa-building text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Zillow.com</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-solid fa-square-poll-horizontal text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Monday.com</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-solid fa-square-poll-horizontal text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Monday.com</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
-                            <i class="fa-solid fa-video text-2xl text-amber-600"></i>
-                            <span class="block text-xs font-semibold text-stone-800">Teams & Meet</span>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 text-center space-y-2">
+                            <i class="fa-solid fa-video text-2xl text-amber-400"></i>
+                            <span class="block text-xs font-semibold text-slate-200">Teams & Meet</span>
                         </div>
                     </div>
                 </div>
@@ -287,142 +283,142 @@
     </section>
 
     <!-- PORTFOLIO SHOWCASE SECTION -->
-    <section id="portfolio" class="py-20 bg-white border-t border-stone-200">
+    <section id="portfolio" class="py-20 bg-slate-900/50 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Real Estate Portfolio & Work Samples</h2>
-                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
-                <p class="text-stone-600 text-base">
-                    Explore practical outputs completed during professional training and real estate administrative simulations.
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Real Estate Portfolio & Work Samples</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-300 text-lg">
+                    Explore practical outputs completed during professional training and real estate administrative simulations. Click any item to inspect details.
                 </p>
             </div>
 
             <!-- Portfolio Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Item 1: MLS Listing Draft -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">01</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">MLS Listing Entry</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">01</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">MLS Listing Entry</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Complete property listing setup with detailed specs, luxury features, pricing, and agent credentials.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('mls')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('mls')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 2: Property Search Spreadsheet -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">02</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Property Search Data</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">02</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Property Search Data</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Target location property look-up database tracking addresses, parcel numbers, valuations, and lot sizes.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('search')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('search')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 3: Comparable Market Analysis (CMA) -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">03</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Comparable Market Analysis</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">03</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Comparable Market Analysis</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Estimated Market Value calculation sheet comparing property size, comps, adjustments, and ARV.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('cma')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('cma')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 4: Tenant Screening Report -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">04</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Tenant Screening Report</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">04</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Tenant Screening Report</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Applicant evaluation summary verifying credit scores, net income, criminal backgrounds, and rental history.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('tenant')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('tenant')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 5: Canva Marketing Flyer 1 -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">05</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Property Rental Flyer</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">05</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Property Rental Flyer</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Modern property rental marketing flyer designed in Canva showcasing amenities and booking calls-to-action.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('flyer1')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('flyer1')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 6: Canva Open House Flyer -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">06</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Open House Flyer</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">06</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Open House Flyer</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Open House promotional flyer featuring schedule dates, property highlights, and direct contact details.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('flyer2')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('flyer2')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 7: Buyer Lead Tracker Spreadsheet -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">07</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Buyer Lead Tracker</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">07</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Buyer Lead Tracker</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Structured CRM spreadsheet tracking client budgets, preferred neighborhoods, listing addresses, and agent details.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('tracker')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('tracker')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
 
                 <!-- Item 8: Single-Family Home Listing -->
-                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-amber-500/50 transition flex flex-col justify-between">
                     <div class="p-6 space-y-3">
-                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">08</div>
-                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Single-Family Listing</h3>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">08</div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition">Single-Family Listing</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Comprehensive property presentation featuring room specifications, pricing, fees, and photo galleries.
                         </p>
                     </div>
                     <div class="px-6 pb-6 pt-2">
-                        <button onclick="openModal('listing')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-eye"></i> View Details
+                        <button onclick="openModal('listing')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white text-xs font-semibold transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Sample
                         </button>
                     </div>
                 </div>
@@ -431,34 +427,34 @@
     </section>
 
     <!-- EXPERIENCE & EDUCATION SECTION -->
-    <section id="experience" class="py-20 bg-stone-50 border-t border-stone-200">
+    <section id="experience" class="py-20 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Experience & Education</h2>
-                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Experience & Education</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Professional Experience -->
                 <div class="space-y-6">
-                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
-                        <i class="fa-solid fa-briefcase text-amber-600"></i> Professional Background
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-amber-400"></i> Professional Background
                     </h3>
                     
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
-                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">October 2026 – November 2026</span>
-                        <h4 class="text-lg font-bold text-stone-900">Real Estate Virtual Assistant (Trainee)</h4>
-                        <p class="text-sm font-medium text-stone-700">Sync2VA Training Program</p>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 relative border-l-4 border-l-amber-500">
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">October 2026 – November 2026</span>
+                        <h4 class="text-lg font-bold text-white">Real Estate Virtual Assistant (Trainee)</h4>
+                        <p class="text-sm font-medium text-slate-300">Sync2VA Training Program</p>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Executed simulated real estate workflows including property lookup, CMA comparative research, MLS data entry, tenant screening reports, and digital marketing flyers.
                         </p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
-                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">2025 – 2026</span>
-                        <h4 class="text-lg font-bold text-stone-900">Small Business Owner & Operations Manager</h4>
-                        <p class="text-sm font-medium text-stone-700">Computer Shop & Piso Wi-Fi Business</p>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 relative border-l-4 border-l-amber-500">
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">2025 – 2026</span>
+                        <h4 class="text-lg font-bold text-white">Small Business Owner & Operations Manager</h4>
+                        <p class="text-sm font-medium text-slate-300">Computer Shop & Piso Wi-Fi Business</p>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Handled client communications, technical troubleshooting, network hardware maintenance, database stability, and high-accuracy recordkeeping.
                         </p>
                     </div>
@@ -466,24 +462,24 @@
 
                 <!-- Education & Training -->
                 <div class="space-y-6">
-                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap text-amber-600"></i> Education & Certification
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-amber-400"></i> Education & Certification
                     </h3>
 
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
-                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">September 2026 – October 2026</span>
-                        <h4 class="text-lg font-bold text-stone-900">Real Estate Virtual Assistant Training</h4>
-                        <p class="text-sm font-medium text-stone-700">Sync2VA Program</p>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 relative border-l-4 border-l-amber-500">
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">September 2026 – October 2026</span>
+                        <h4 class="text-lg font-bold text-white">Real Estate Virtual Assistant Training</h4>
+                        <p class="text-sm font-medium text-slate-300">Sync2VA Program</p>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Specialized training in Real Estate Administrative Operations, CRM Maintenance, Transaction Coordination Workflows, and SOP Compliance.
                         </p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
-                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">College Degree</span>
-                        <h4 class="text-lg font-bold text-stone-900">Bachelor of Science in Political Science</h4>
-                        <p class="text-sm font-medium text-stone-700">North Eastern Mindanao State University, Tandag, Philippines</p>
-                        <p class="text-stone-600 text-xs leading-relaxed">
+                    <div class="glass-card p-6 rounded-2xl space-y-3 relative border-l-4 border-l-amber-500">
+                        <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">College Degree</span>
+                        <h4 class="text-lg font-bold text-white">Bachelor of Science in Political Science</h4>
+                        <p class="text-sm font-medium text-slate-300">North Eastern Mindanao State University, Tandag, Philippines</p>
+                        <p class="text-slate-400 text-xs leading-relaxed">
                             Built strong analytical, organizational, communication, and document preparation foundations.
                         </p>
                     </div>
@@ -492,55 +488,88 @@
         </div>
     </section>
 
-    <!-- ELEGANT CONTACT SECTION (No form) -->
-    <section id="contact" class="py-20 bg-white border-t border-stone-200">
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-slate-900/50 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Get in Touch</h2>
-                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
-                <p class="text-stone-600 text-base">
-                    Looking for a reliable Real Estate Virtual Assistant? Reach out directly via any of the channels below.
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Let's Work Together</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-300 text-lg">
+                    Looking for a dedicated Real Estate Virtual Assistant? Reach out today to discuss how I can support your real estate business.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                <a href="mailto:aubreybinarao97@gmail.com" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
-                        <i class="fa-regular fa-envelope"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-8 rounded-3xl space-y-6">
+                        <h3 class="text-xl font-bold text-white">Contact Information</h3>
+                        <div class="space-y-4 text-sm text-slate-300">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Email Me</span>
+                                    <a href="mailto:aubreybinarao97@gmail.com" class="font-semibold text-white hover:text-amber-400">aubreybinarao97@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Call / Phone</span>
+                                    <a href="tel:09631832618" class="font-semibold text-white hover:text-amber-400">09631832618</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Location</span>
+                                    <span class="font-semibold text-white">Tandag, Philippines</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">LinkedIn Profile</span>
+                                    <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="font-semibold text-white hover:text-amber-400">linkedin.com/in/aubreybinaraova</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Email</span>
-                    <span class="block text-sm font-bold text-stone-900 break-all">aubreybinarao97@gmail.com</span>
-                </a>
+                </div>
 
-                <a href="tel:09631832618" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Phone</span>
-                    <span class="block text-sm font-bold text-stone-900">09631832618</span>
-                </a>
-
-                <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </div>
-                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">LinkedIn</span>
-                    <span class="block text-sm font-bold text-stone-900">aubreybinaraova</span>
-                </a>
-
-                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Location</span>
-                    <span class="block text-sm font-bold text-stone-900">Tandag, Philippines</span>
+                <div class="lg:col-span-7">
+                    <!-- STATIC FORM BACKEND (Replace YOUR_FORMSPREE_ENDPOINT with your form link from formspree.io) -->
+                    <form action="https://formspree.io/f/xrpplznj" method="POST" class="glass-card p-8 rounded-3xl space-y-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-300">Your Name</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500 transition" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-300">Your Email</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500 transition" placeholder="john@example.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-semibold text-slate-300">Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-amber-500 transition" placeholder="Tell me about your project or role..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-bold transition shadow-lg shadow-amber-600/25 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 bg-stone-900 text-stone-400 text-sm">
+    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>&copy; 2026 Aubrey Anne P. Binarao. All rights reserved.</p>
             <p class="text-xs text-amber-500">Real Estate Virtual Assistant Portfolio</p>
@@ -548,9 +577,9 @@
     </footer>
 
     <!-- MODAL POPUP FOR PORTFOLIO SAMPLES -->
-    <div id="portfolio-modal" class="fixed inset-0 z-50 hidden bg-stone-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white border border-stone-200 max-w-2xl w-full rounded-3xl p-6 sm:p-8 relative space-y-6 max-h-[90vh] overflow-y-auto shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-6 right-6 text-stone-400 hover:text-stone-900 text-xl">
+    <div id="portfolio-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card bg-slate-900 border border-slate-700 max-w-2xl w-full rounded-3xl p-6 sm:p-8 relative space-y-6 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="modal-content" class="space-y-4">
@@ -627,18 +656,18 @@
             
             modalContent.innerHTML = `
                 <div class="space-y-3">
-                    <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">${item.category}</span>
-                    <h3 class="text-2xl font-serif-elegant font-bold text-stone-900">${item.title}</h3>
-                    <p class="text-stone-600 text-sm leading-relaxed">${item.desc}</p>
+                    <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">${item.category}</span>
+                    <h3 class="text-2xl font-bold text-white">${item.title}</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">${item.desc}</p>
                 </div>
-                <div class="pt-4 border-t border-stone-200">
-                    <h4 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Key Highlights</h4>
+                <div class="pt-4 border-t border-slate-800">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Key Highlights</h4>
                     <div class="flex flex-wrap gap-2">
-                        ${item.metrics.map(m => `<span class="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium">${m}</span>`).join('')}
+                        ${item.metrics.map(m => `<span class="px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-medium">${m}</span>`).join('')}
                     </div>
                 </div>
                 <div class="pt-4 flex justify-end">
-                    <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-semibold transition">Close</button>
+                    <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">Close</button>
                 </div>
             `;
 
