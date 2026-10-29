@@ -3,1002 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aubrey Anne P. Binarao | Real Estate Virtual Assistant (REVA)</title>
+    <title>Aubrey Anne Binarao | Real Estate Virtual Assistant Portfolio</title>
+    <!-- Favicon: Professional House / Key Icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D97706'><path d='M12 3L2 12h3v8h5v-6h4v6h5v-8h3L12 3z'/></svg>">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons CDN -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D97706'><path d='M12 3L2 12h3v8h5v-6h4v6h5v-8h3L12 3z'/></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navyDark: '#0B1120',
-                        navyCard: '#1E293B',
-                        navyBorder: '#334155',
-                        amberGold: '#D97706',
-                        amberHover: '#B45309',
-                        goldAccent: '#F59E0B',
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        stone: {
+                            50: '#FAFAF9',
+                            100: '#F5F5F4',
+                            200: '#E7E5E4',
+                            800: '#292524',
+                            900: '#1C1917',
+                        },
+                        amber: {
+                            600: '#D97706',
+                            700: '#B45309',
+                        }
                     }
                 }
             }
         }
     </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
-        .hero-bg {
-            background: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.12) 0%, transparent 40%),
-                        radial-gradient(circle at 20% 80%, rgba(30, 41, 59, 0.8) 0%, transparent 50%),
-                        #0B1120;
+        .font-serif-elegant {
+            font-family: 'Cormorant Garamond', serif;
         }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0B1120;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #334155;
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #D97706;
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(231, 229, 228, 0.8);
         }
     </style>
 </head>
-<body class="bg-navyDark text-slate-100 font-sans antialiased selection:bg-amberGold selection:text-white custom-scrollbar">
+<body class="bg-stone-50 text-stone-800 antialiased selection:bg-amber-100 selection:text-amber-900">
 
-    <!-- NAVIGATION HEADER -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-navyDark/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300" id="navbar">
+    <!-- NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amberGold to-amberHover flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg shadow-amberGold/20 group-hover:scale-105 transition-transform">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center text-white font-serif-elegant font-bold text-xl shadow-md shadow-amber-600/20">
                     AB
                 </div>
                 <div>
-                    <span class="block font-serif font-bold text-lg leading-none text-white tracking-wide">Aubrey Binarao</span>
-                    <span class="text-[11px] font-semibold text-amber-400 uppercase tracking-widest">Real Estate VA</span>
+                    <span class="block font-bold text-lg text-stone-900 leading-tight">Aubrey Anne Binarao</span>
+                    <span class="block text-xs text-amber-700 font-medium tracking-wider uppercase">Real Estate VA</span>
                 </div>
             </a>
-
-            <!-- Desktop Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-amberGold transition-colors">About</a>
-                <a href="#skills" class="hover:text-amberGold transition-colors">Core Skills</a>
-                <a href="#portfolio" class="hover:text-amberGold transition-colors">Work Portfolio</a>
-                <a href="#experience" class="hover:text-amberGold transition-colors">Experience</a>
-                <a href="#contact" class="hover:text-amberGold transition-colors">Contact</a>
-            </nav>
-
-            <!-- CTA Header Button -->
-            <div class="hidden sm:flex items-center gap-4">
-                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amberGold to-amberHover hover:from-amberHover hover:to-amberGold text-white font-semibold text-xs uppercase tracking-wider shadow-lg shadow-amberGold/20 hover:shadow-amberGold/40 transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-calendar-check mr-1.5"></i> Hire Me
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="text-stone-600 hover:text-amber-700 transition">About</a>
+                <a href="#skills" class="text-stone-600 hover:text-amber-700 transition">Skills & Tools</a>
+                <a href="#portfolio" class="text-stone-600 hover:text-amber-700 transition">Portfolio Samples</a>
+                <a href="#experience" class="text-stone-600 hover:text-amber-700 transition">Experience</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-semibold transition shadow-md flex items-center gap-2">
+                    <i class="fa-regular fa-envelope text-xs"></i> Contact
                 </a>
             </div>
 
-            <!-- Mobile Menu Toggle Button -->
-            <button onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-white text-xl p-2" aria-label="Toggle Navigation">
-                <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-stone-700 hover:text-stone-900 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
             </button>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden bg-navyCard/95 border-b border-slate-800 px-6 py-6 space-y-4">
-            <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-200 font-medium hover:text-amberGold">About Me</a>
-            <a href="#skills" onclick="toggleMobileMenu()" class="block text-slate-200 font-medium hover:text-amberGold">Core Skills & Tools</a>
-            <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-slate-200 font-medium hover:text-amberGold">Work Portfolio</a>
-            <a href="#experience" onclick="toggleMobileMenu()" class="block text-slate-200 font-medium hover:text-amberGold">Experience & Education</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-200 font-medium hover:text-amberGold">Contact Me</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="block w-full text-center py-3 rounded-xl bg-amberGold text-white font-bold text-xs uppercase">Schedule a Discovery Call</a>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 space-y-3 bg-white border-b border-stone-200">
+            <a href="#about" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">About</a>
+            <a href="#skills" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Skills & Tools</a>
+            <a href="#portfolio" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Portfolio Samples</a>
+            <a href="#experience" class="block py-2 text-stone-600 hover:text-amber-700 font-medium">Experience</a>
+            <a href="#contact" class="block text-center py-3 rounded-xl bg-stone-900 text-white font-semibold shadow-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 bg-gradient-to-b from-stone-100 via-stone-50 to-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-600/20 text-amber-800 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span> Available for Remote Opportunities
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-elegant font-bold text-stone-900 tracking-tight leading-[1.15]">
+                        Elevating Real Estate Operations with <span class="italic text-amber-700">Precision & Elegance</span>
+                    </h1>
+                    <p class="text-lg text-stone-600 max-w-2xl leading-relaxed">
+                        Detail-oriented Real Estate Virtual Assistant specializing in CRM data entry, transaction coordination workflows, MLS listing management, and client care. Dedicated to freeing up top-producing agents so they can focus on closing deals.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold transition shadow-lg shadow-amber-600/20 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase"></i> View Portfolio Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 font-semibold transition shadow-sm flex items-center gap-2">
+                            <i class="fa-regular fa-envelope"></i> Get Contact Details
+                        </a>
+                    </div>
+                    <div class="pt-6 grid grid-cols-3 gap-6 border-t border-stone-200 text-stone-500 text-sm">
+                        <div>
+                            <span class="block text-2xl font-bold text-stone-900">100%</span>
+                            <span>SOP Compliance</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-stone-900">Sync2VA</span>
+                            <span>Certified Trainee</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-stone-900">24/7</span>
+                            <span>Reliable Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="glass-card-light rounded-3xl p-8 space-y-6 text-center shadow-xl shadow-stone-200/50">
+                            <div class="w-28 h-28 mx-auto rounded-full bg-stone-900 p-1 shadow-lg">
+                                <div class="w-full h-full rounded-full bg-amber-600 flex items-center justify-center text-3xl font-serif-elegant font-bold text-white">
+                                    AB
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-serif-elegant font-bold text-stone-900">Aubrey Anne Binarao</h3>
+                                <p class="text-amber-700 font-medium text-sm mt-1">Real Estate Virtual Assistant</p>
+                                <p class="text-stone-500 text-xs mt-2 flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-location-dot text-amber-600"></i> Tandag, Philippines
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-stone-200 flex justify-center space-x-4">
+                                <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="mailto:aubreybinarao97@gmail.com" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </a>
+                                <a href="tel:09631832618" class="w-10 h-10 rounded-xl bg-stone-100 hover:bg-amber-600 text-stone-700 hover:text-white flex items-center justify-center transition shadow-sm">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 hero-bg overflow-hidden border-b border-slate-800/60">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Hero Left Column Text -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amberGold/10 border border-amberGold/30 text-amber-400 text-xs font-semibold tracking-wide">
-                        <i class="fa-solid fa-circle text-[8px] text-amber-400 animate-pulse"></i>
-                        Available for Full-time / Part-time REVA Roles
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Professional Summary</h2>
+                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+                <p class="text-stone-600 text-base leading-relaxed">
+                    Dedicated administrative professional combining practical business management experience with specialized real estate virtual assistant training.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-bullseye"></i>
                     </div>
-
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                        Elevating Real Estate Operations with <span class="gold-gradient-text">Precision & Efficiency</span>
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
-                        Dedicated Real Estate Virtual Assistant (REVA) specializing in CRM lead management, accurate MLS property listing entries, Comparative Market Analysis (CMA) research, tenant screening audits, and high-converting marketing collateral.
+                    <h3 class="text-xl font-bold text-stone-900">Transaction Accuracy</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Experienced in handling high-accuracy documentation, CRM record updates, and structured property data logs with strict compliance to SOPs.
                     </p>
-
-                    <!-- Quick Action Contact Buttons -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amberGold to-amberHover text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-amberGold/25 hover:shadow-amberGold/40 transition-all transform hover:-translate-y-0.5">
-                            <i class="fa-solid fa-folder-open mr-2"></i> View Work Samples
-                        </a>
-                        <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-xs uppercase tracking-wider transition-all">
-                            <i class="fa-solid fa-paper-plane mr-2"></i> Send Inquiry
-                        </a>
-                    </div>
-
-                    <!-- Direct Contact Badges -->
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6 border-t border-slate-800/80 text-xs text-slate-400">
-                        <a href="mailto:aubreybinarao97@gmail.com" class="hover:text-amberGold flex items-center gap-2 transition-colors">
-                            <i class="fa-solid fa-envelope text-amberGold text-sm"></i> aubreybinarao97@gmail.com
-                        </a>
-                        <a href="tel:09631832618" class="hover:text-amberGold flex items-center gap-2 transition-colors">
-                            <i class="fa-solid fa-phone text-amberGold text-sm"></i> 09631832618
-                        </a>
-                        <a href="https://www.linkedin.com/in/aubreybinaraova/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold flex items-center gap-2 transition-colors">
-                            <i class="fa-brands fa-linkedin text-amberGold text-sm"></i> LinkedIn Profile
-                        </a>
-                    </div>
                 </div>
 
-                <!-- Hero Right Column Feature Card -->
-                <div class="lg:col-span-5">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Decorative Backdrop Glow -->
-                        <div class="absolute -inset-1 bg-gradient-to-r from-amberGold/30 to-amber-600/30 rounded-3xl blur-xl opacity-70"></div>
-                        
-                        <div class="relative bg-navyCard border border-slate-700/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
-                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-12 h-12 rounded-2xl bg-amberGold/15 border border-amberGold/30 flex items-center justify-center text-amberGold text-xl">
-                                        <i class="fa-solid fa-id-card"></i>
-                                    </div>
-                                    <div>
-                                        <h3 class="font-bold text-white text-base">Aubrey Anne P. Binarao</h3>
-                                        <p class="text-xs text-slate-400"><i class="fa-solid fa-location-dot text-amberGold mr-1"></i> Tandag, Surigao del Sur, PH</p>
-                                    </div>
-                                </div>
-                                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold uppercase tracking-wider">Sync2VA Certified</span>
-                            </div>
-
-                            <!-- Highlights & Key Metrics Grid -->
-                            <div class="grid grid-cols-3 gap-3 text-center">
-                                <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800">
-                                    <div class="font-serif font-bold text-xl sm:text-2xl text-amberGold">460+</div>
-                                    <div class="text-[10px] text-slate-400 uppercase tracking-wider font-medium mt-1">OJT Hours</div>
-                                </div>
-                                <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800">
-                                    <div class="font-serif font-bold text-xl sm:text-2xl text-amberGold">99%+</div>
-                                    <div class="text-[10px] text-slate-400 uppercase tracking-wider font-medium mt-1">System Uptime</div>
-                                </div>
-                                <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800">
-                                    <div class="font-serif font-bold text-xl sm:text-2xl text-amberGold">100%</div>
-                                    <div class="text-[10px] text-slate-400 uppercase tracking-wider font-medium mt-1">SOP Compliance</div>
-                                </div>
-                            </div>
-
-                            <!-- Core Value Pitch -->
-                            <div class="space-y-3 pt-2">
-                                <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Key Specializations</div>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-2.5 text-xs text-slate-300">
-                                        <i class="fa-solid fa-check text-amberGold"></i> MLS Drafts & Property Specifications
-                                    </div>
-                                    <div class="flex items-center gap-2.5 text-xs text-slate-300">
-                                        <i class="fa-solid fa-check text-amberGold"></i> CMA Valuation Spreadsheets & Comps
-                                    </div>
-                                    <div class="flex items-center gap-2.5 text-xs text-slate-300">
-                                        <i class="fa-solid fa-check text-amberGold"></i> Tenant Screening & Credit Multiplier Checks
-                                    </div>
-                                    <div class="flex items-center gap-2.5 text-xs text-slate-300">
-                                        <i class="fa-solid fa-check text-amberGold"></i> Client Calendar & Showing Coordination
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-headset"></i>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFESSIONAL SUMMARY & BIO SECTION -->
-    <section id="about" class="py-20 bg-navyDark border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-14">
-                <span class="text-xs font-bold text-amberGold uppercase tracking-widest">Professional Overview</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Behind The Work</h2>
-                <div class="w-16 h-1 bg-gradient-to-r from-amberGold to-transparent mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="bg-navyCard rounded-3xl p-8 border border-slate-800 space-y-5">
-                    <h3 class="text-xl font-serif font-bold text-white">Proactive Administrative & Operations Support</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        As a trained Real Estate Virtual Assistant with hands-on experience as a small business owner and operations manager, I bridge technical precision with top-tier client communication.
+                    <h3 class="text-xl font-bold text-stone-900">Client Care & Comms</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Skilled in managing client communications, coordinating property showings, and fielding inquiries with professional warmth and prompt follow-up.
                     </p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        I specialize in removing administrative friction for busy real estate agents and brokers—handling listing management, market comps, tenant background verification, and lead management so agents can focus on closing deals.
-                    </p>
-                    <div class="pt-2 flex flex-wrap gap-2">
-                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 text-xs font-medium">CRM Data Entry</span>
-                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 text-xs font-medium">MLS Workflows</span>
-                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 text-xs font-medium">Calendar Scheduling</span>
-                        <span class="px-3 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 text-xs font-medium">Troubleshooting</span>
-                    </div>
                 </div>
 
-                <!-- Education & Academic Foundation Card -->
-                <div class="space-y-6">
-                    <div class="bg-navyCard rounded-3xl p-6 border border-slate-800 flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-amberGold/10 border border-amberGold/30 flex items-center justify-center text-amberGold text-xl shrink-0">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-amberGold uppercase tracking-wider">Bachelor's Degree</span>
-                            <h4 class="text-base font-bold text-white mt-1">BS in Political Science</h4>
-                            <p class="text-xs text-slate-400">North Eastern Mindanao State University (NEMSU), Tandag, PH</p>
-                            <p class="text-xs text-slate-300 mt-2">Equipped with strong analytical skills, legal/SOP comprehension, research discipline, and official documentation accuracy.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-navyCard rounded-3xl p-6 border border-slate-800 flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-2xl bg-amberGold/10 border border-amberGold/30 flex items-center justify-center text-amberGold text-xl shrink-0">
-                            <i class="fa-solid fa-certificate"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold text-amberGold uppercase tracking-wider">Specialized VA Training</span>
-                            <h4 class="text-base font-bold text-white mt-1">Sync2VA Real Estate VA Training</h4>
-                            <p class="text-xs text-slate-400">Oct 2026 – Nov 2026</p>
-                            <p class="text-xs text-slate-300 mt-2">Comprehensive simulated workflows covering Zillow/MLS property creation, CMA calculations, lead research, and screening reports.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE SKILLS & TECH STACK SECTION -->
-    <section id="skills" class="py-20 bg-navyCard/30 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs font-bold text-amberGold uppercase tracking-widest">Capabilities & Tools</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Core Skills & Software Proficiency</h2>
-                <p class="text-sm text-slate-400">Equipped with the software stack and administrative workflows required for seamless agency operations.</p>
-            </div>
-
-            <!-- Skills Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-                <!-- Skill Item 1 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-house-circle-check"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">MLS & Property Listing Entry</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Accurate data logging of interior/exterior features, utilities, HOA terms, lot specs, and photo sequencing on MLS platforms.</p>
-                </div>
-
-                <!-- Skill Item 2 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-calculator"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">CMA & ARV Market Research</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Comparative market analysis, calculating average price per sqft, estimated repair values (ERV), and After Repair Value (ARV).</p>
-                </div>
-
-                <!-- Skill Item 3 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">Tenant Screening & Auditing</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Evaluating applicant background checks, 3x rent income ratios, 520+ credit thresholds, eviction history, and landlord references.</p>
-                </div>
-
-                <!-- Skill Item 4 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-users-viewfinder"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">CRM & Buyer Matching Logs</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Tracking high-net-worth client preferences, preferred neighborhoods, budget caps, listing status, and seller agent contact info.</p>
-                </div>
-
-                <!-- Skill Item 5 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">Canva Marketing & Open House Collateral</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Designing aesthetic open house announcements, single-family property showcase sheets, rental flyers, and promotional graphics.</p>
-                </div>
-
-                <!-- Skill Item 6 -->
-                <div class="bg-navyCard p-6 rounded-2xl border border-slate-800 hover:border-amberGold/50 transition-all group">
-                    <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-lg mb-4 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-calendar-days"></i>
-                    </div>
-                    <h3 class="font-bold text-white text-base mb-2">Inbox & Calendar Management</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">Organizing email communications, showing appointments, client follow-ups, and calendar schedules using Google Workspace.</p>
-                </div>
-            </div>
-
-            <!-- Software Tools Badges -->
-            <div class="bg-navyDark p-8 rounded-3xl border border-slate-800 text-center space-y-6">
-                <h4 class="text-sm font-bold text-slate-300 uppercase tracking-wider">Primary Tools & Platforms</h4>
-                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-                    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-navyCard border border-slate-700 text-xs font-semibold text-slate-200">
-                        <i class="fa-brands fa-google text-red-400 text-sm"></i> Google Workspace
-                    </div>
-                    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-navyCard border border-slate-700 text-xs font-semibold text-slate-200">
-                        <i class="fa-brands fa-microsoft text-blue-400 text-sm"></i> MS Office / Excel
-                    </div>
-                    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-navyCard border border-slate-700 text-xs font-semibold text-slate-200">
-                        <i class="fa-solid fa-paintbrush text-cyan-400 text-sm"></i> Canva Design Pro
-                    </div>
-                    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-navyCard border border-slate-700 text-xs font-semibold text-slate-200">
-                        <i class="fa-solid fa-kanban text-amberGold text-sm"></i> Monday.com
-                    </div>
-                    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-navyCard border border-slate-700 text-xs font-semibold text-slate-200">
-                        <i class="fa-solid fa-video text-purple-400 text-sm"></i> MS Teams & Google Meet
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE WORK PORTFOLIO GALLERY -->
-    <section id="portfolio" class="py-20 bg-navyDark border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
-                <span class="text-xs font-bold text-amberGold uppercase tracking-widest">Verified Samples</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Real Estate Work Portfolio</h2>
-                <p class="text-sm text-slate-400">Click any work sample card below to inspect full spreadsheets, marketing flyers, or screening reports.</p>
-            </div>
-
-            <!-- Filter Tabs Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="filter-buttons">
-                <button onclick="filterPortfolio('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-amberGold text-white shadow-lg shadow-amberGold/20">All Samples (8)</button>
-                <button onclick="filterPortfolio('research')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-navyCard hover:bg-slate-800 transition-all">Property Research & Data</button>
-                <button onclick="filterPortfolio('marketing')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-navyCard hover:bg-slate-800 transition-all">Marketing & Canva</button>
-                <button onclick="filterPortfolio('screening')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-navyCard hover:bg-slate-800 transition-all">Tenant Screening</button>
-                <button onclick="filterPortfolio('mls')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-navyCard hover:bg-slate-800 transition-all">MLS & CRM Data</button>
-            </div>
-
-            <!-- Portfolio Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
-                
-                <!-- Sample 1: Brockton MA Spreadsheet -->
-                <div class="portfolio-item research bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample1')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold uppercase">Database Research</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-table mr-1"></i> Excel Data</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">Brockton, MA Property Tax Database</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Extracted parcel numbers, owner records, total values, building styles, year built, and lot size data for target Brockton properties.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>View Interactive Data Sheet</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 2: Oregon Property Rentals Flyer -->
-                <div class="portfolio-item marketing bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample2')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold uppercase">Canva Flyer</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-image mr-1"></i> Marketing</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">Property Rentals Flyer (Oregon, USA)</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">High-converting promotional rental graphic designed in Canva with branded color palette, hero property display, and call-to-actions.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>Preview Marketing Graphic</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 3: Corvallis Single-Family Feature -->
-                <div class="portfolio-item marketing bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample3')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold uppercase">Rental Feature Sheet</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-house mr-1"></i> Corvallis, OR</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">4-Bedroom Rental Spec Sheet ($3,200/Mo)</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Comprehensive feature sheet with interior gallery photos, room breakdown, amenities, price rate, and Zillow viewing link integration.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>Preview Feature Sheet</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 4: Tenant Screening Report -->
-                <div class="portfolio-item screening bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample4')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-bold uppercase">Audit & Screening</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-clipboard-check mr-1"></i> Report</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">Applicant Tenant Screening Report</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Rigorous evaluation of rental applications against credit thresholds (520+), income multipliers, eviction records, and criminal history.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>View Audit Matrix</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 5: Carmichael MLS Listing Entry -->
-                <div class="portfolio-item mls bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample5')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-amberGold/10 border border-amberGold/30 text-amberGold text-[10px] font-bold uppercase">MLS Listing Draft</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-laptop-file mr-1"></i> $2.25M Single Family</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">Carmichael, CA $2.25M Property Draft</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Full MLS listing creation with interior/exterior tags, square footage, photo sequencing, HOA specs, and agent details.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>View Full MLS Portal Draft</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 6: Lynnview KY CMA Spreadsheet -->
-                <div class="portfolio-item research bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample6')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-[10px] font-bold uppercase">CMA & ARV Valuation</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-calculator mr-1"></i> Lynnview, KY</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">Seller Comps & Market Value Worksheet</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Calculated Estimated Market Value ($158,112.28) using Subject Property specs, 3 Comps, repair budget ($18.5k), and price/sqft math.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>Inspect CMA Calculations</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 7: Open House Promo Graphic -->
-                <div class="portfolio-item marketing bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample7')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold uppercase">Open House Promo</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-bullhorn mr-1"></i> Flyer</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">4911 Raven Rd Open House Graphic</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Open house announcement flyer with schedule, list price ($200,000), property specs, photo highlights, and contact information.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>Preview Open House Graphic</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-                <!-- Sample 8: NYC Buyer Matching CRM Log -->
-                <div class="portfolio-item mls bg-navyCard rounded-3xl overflow-hidden border border-slate-800 hover:border-amberGold/60 transition-all duration-300 flex flex-col justify-between group cursor-pointer" onclick="openModal('sample8')">
-                    <div class="p-6 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-full bg-amberGold/10 border border-amberGold/30 text-amberGold text-[10px] font-bold uppercase">CRM Buyer Log</span>
-                            <span class="text-xs text-slate-500"><i class="fa-solid fa-address-book mr-1"></i> NYC Real Estate</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white group-hover:text-amberGold transition-colors">NYC Buyer Preference Matching Log</h3>
-                        <p class="text-xs text-slate-400 line-clamp-3">Lead preference tracking database mapping high-budget clients to StreetEasy listings, square footage, neighborhood criteria, and agent details.</p>
-                    </div>
-                    <div class="p-6 pt-0 flex items-center justify-between text-xs text-amberGold font-semibold">
-                        <span>View Lead Matching Log</span>
-                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE & TRAINING TIMELINE SECTION -->
-    <section id="experience" class="py-20 bg-navyCard/30 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs font-bold text-amberGold uppercase tracking-widest">Track Record</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Experience & Training</h2>
-                <p class="text-sm text-slate-400">Combining small business management experience with specialized real estate virtual assistant training.</p>
-            </div>
-
-            <div class="max-w-4xl mx-auto space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:-ml-0.5 before:w-0.5 before:bg-slate-800">
-                
-                <!-- Timeline item 1 -->
-                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between group">
-                    <div class="sm:w-1/2 sm:pr-8 sm:text-right mb-4 sm:mb-0 order-1">
-                        <span class="text-xs font-bold text-amberGold uppercase">October 2026 – November 2026</span>
-                        <h3 class="text-lg font-bold text-white mt-1">Real Estate Virtual Assistant (Trainee)</h3>
-                        <p class="text-xs text-slate-400">Sync2VA Intensive Training Program</p>
-                    </div>
-
-                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-amberGold text-navyDark flex items-center justify-center font-bold text-xs shadow-lg shadow-amberGold/30 z-10 order-2">
+                <div class="bg-stone-50 p-8 rounded-2xl border border-stone-200/80 space-y-4 hover:shadow-lg hover:border-amber-600/30 transition">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
                         <i class="fa-solid fa-laptop-code"></i>
                     </div>
-
-                    <div class="sm:w-1/2 sm:pl-8 order-3 pl-12 sm:pl-8">
-                        <div class="bg-navyCard p-5 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2">
-                            <p>• Executed simulated real estate workflows including CRM updates, listing maintenance, and Google Workspace calendar scheduling.</p>
-                            <p>• Mastered transaction coordination support, lead tracking, and SOP compliance.</p>
-                            <p>• Practiced proactive daily progress reporting, email inbox triage, and client care.</p>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold text-stone-900">Tech-Savvy Operations</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Proficient across Google Workspace, MS Office, Canva marketing design, Zillow, Monday.com, and robust technical troubleshooting.
+                    </p>
                 </div>
-
-                <!-- Timeline item 2 -->
-                <div class="relative flex flex-col sm:flex-row items-start sm:items-center justify-between group">
-                    <div class="sm:w-1/2 sm:pr-8 sm:text-right mb-4 sm:mb-0 order-1 sm:order-3 pl-12 sm:pl-0">
-                        <div class="bg-navyCard p-5 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2 text-left">
-                            <p>• Handled daily client communications, customer support resolution, and digital transaction logging.</p>
-                            <p>• Maintained network hardware and Piso Wi-Fi portals, achieving 99%+ uptime and system stability.</p>
-                            <p>• Managed high-accuracy documentation, client logs, and financial record-keeping.</p>
-                        </div>
-                    </div>
-
-                    <div class="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center font-bold text-xs z-10 order-2">
-                        <i class="fa-solid fa-store"></i>
-                    </div>
-
-                    <div class="sm:w-1/2 sm:pl-8 order-3 sm:order-1 pl-12 sm:pl-0 sm:text-right">
-                        <span class="text-xs font-bold text-amberGold uppercase">2025 – 2026</span>
-                        <h3 class="text-lg font-bold text-white mt-1">Small Business Owner & Operations Manager</h3>
-                        <p class="text-xs text-slate-400">Computer Shop & Piso Wi-Fi Business</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE CONTACT & INQUIRY SECTION -->
-    <section id="contact" class="py-20 bg-navyDark relative">
+    <!-- CORE SKILLS & TOOLS SECTION -->
+    <section id="skills" class="py-20 bg-stone-50 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
-                <span class="text-xs font-bold text-amberGold uppercase tracking-widest">Get In Touch</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Let's Work Together</h2>
-                <p class="text-sm text-slate-400">Ready to streamline your real estate agency administrative operations? Send an inquiry below.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Core Skills & Tools</h2>
+                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+                <p class="text-stone-600 text-base">
+                    Comprehensive competencies built through rigorous training and real-world operational execution.
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                
-                <!-- Contact Direct Info -->
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-navyCard p-8 rounded-3xl border border-slate-800 space-y-6">
-                        <h3 class="font-serif font-bold text-xl text-white">Contact Information</h3>
-                        
-                        <div class="space-y-4 text-xs text-slate-300">
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-base shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-white">Location</div>
-                                    <p class="text-slate-400 mt-0.5">Tandag, Surigao del Sur, Philippines (GMT+8)</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-base shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-white">Email Address</div>
-                                    <a href="mailto:aubreybinarao97@gmail.com" class="text-slate-400 hover:text-amberGold mt-0.5 block">aubreybinarao97@gmail.com</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-base shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-white">Phone / WhatsApp</div>
-                                    <a href="tel:09631832618" class="text-slate-400 hover:text-amberGold mt-0.5 block">+63 963 183 2618</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-xl bg-amberGold/10 text-amberGold flex items-center justify-center text-base shrink-0">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-white">LinkedIn</div>
-                                    <a href="https://www.linkedin.com/in/aubreybinaraova/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-amberGold mt-0.5 block">linkedin.com/in/aubrey-binarao-</a>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Core Competencies -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
+                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-3">
+                        <i class="fa-solid fa-check-to-slot text-amber-600"></i> Core Real Estate Skills
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">Real Estate Admin Support</span>
                         </div>
-
-                        <div class="pt-4 border-t border-slate-800">
-                            <div class="text-xs font-semibold text-slate-300 mb-2">Availability</div>
-                            <p class="text-xs text-slate-400">Open for full-time or part-time Virtual Assistant arrangements across US, Canadian, and Australian time zones.</p>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">Transaction Coordination</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">Property Listing & MLS</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">CRM Data Entry & Leads</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">Calendar & Showings</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-amber-600"></i>
+                            <span class="text-sm font-medium text-stone-800">Email & Inbox Management</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form Card -->
-                <div class="lg:col-span-7">
-                    <form onsubmit="handleFormSubmit(event)" class="bg-navyCard p-8 rounded-3xl border border-slate-800 space-y-5">
-                        <h3 class="font-serif font-bold text-xl text-white">Send a Message</h3>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Name</label>
-                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-navyDark border border-slate-700 text-white text-xs focus:outline-none focus:border-amberGold transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">Your Email</label>
-                                <input type="email" required placeholder="john@realty.com" class="w-full px-4 py-3 rounded-xl bg-navyDark border border-slate-700 text-white text-xs focus:outline-none focus:border-amberGold transition-colors">
-                            </div>
+                <!-- Tools & Technologies -->
+                <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm space-y-6">
+                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-3">
+                        <i class="fa-solid fa-toolbox text-amber-600"></i> Tools & Software Stack
+                    </h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-brands fa-google text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Google Workspace</span>
                         </div>
-
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-2">Services Needed (Select all that apply)</label>
-                            <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-navyDark border border-slate-800 cursor-pointer hover:border-slate-700">
-                                    <input type="checkbox" class="accent-amberGold"> MLS Listing Creation
-                                </label>
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-navyDark border border-slate-800 cursor-pointer hover:border-slate-700">
-                                    <input type="checkbox" class="accent-amberGold"> CMA & Market Comps
-                                </label>
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-navyDark border border-slate-800 cursor-pointer hover:border-slate-700">
-                                    <input type="checkbox" class="accent-amberGold"> Tenant Screening Audit
-                                </label>
-                                <label class="flex items-center gap-2 p-2.5 rounded-xl bg-navyDark border border-slate-800 cursor-pointer hover:border-slate-700">
-                                    <input type="checkbox" class="accent-amberGold"> Canva Marketing Flyers
-                                </label>
-                            </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-solid fa-file-excel text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Microsoft Office</span>
                         </div>
-
-                        <div>
-                            <label class="block text-xs font-medium text-slate-300 mb-1.5">Project Details / Message</label>
-                            <textarea rows="4" required placeholder="Tell me about your agency and how I can help your team..." class="w-full px-4 py-3 rounded-xl bg-navyDark border border-slate-700 text-white text-xs focus:outline-none focus:border-amberGold transition-colors resize-none"></textarea>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-solid fa-palette text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Canva Design</span>
                         </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-solid fa-building text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Zillow.com</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-solid fa-square-poll-horizontal text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Monday.com</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-center space-y-2">
+                            <i class="fa-solid fa-video text-2xl text-amber-600"></i>
+                            <span class="block text-xs font-semibold text-stone-800">Teams & Meet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amberGold to-amberHover text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-amberGold/20 hover:shadow-amberGold/40 transition-all">
-                            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Inquiry
+    <!-- PORTFOLIO SHOWCASE SECTION -->
+    <section id="portfolio" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Real Estate Portfolio & Work Samples</h2>
+                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+                <p class="text-stone-600 text-base">
+                    Explore practical outputs completed during professional training and real estate administrative simulations.
+                </p>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1: MLS Listing Draft -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">01</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">MLS Listing Entry</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Complete property listing setup with detailed specs, luxury features, pricing, and agent credentials.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('mls')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
                         </button>
-                    </form>
+                    </div>
                 </div>
 
+                <!-- Item 2: Property Search Spreadsheet -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">02</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Property Search Data</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Target location property look-up database tracking addresses, parcel numbers, valuations, and lot sizes.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('search')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 3: Comparable Market Analysis (CMA) -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">03</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Comparable Market Analysis</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Estimated Market Value calculation sheet comparing property size, comps, adjustments, and ARV.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('cma')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 4: Tenant Screening Report -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">04</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Tenant Screening Report</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Applicant evaluation summary verifying credit scores, net income, criminal backgrounds, and rental history.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('tenant')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 5: Canva Marketing Flyer 1 -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">05</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Property Rental Flyer</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Modern property rental marketing flyer designed in Canva showcasing amenities and booking calls-to-action.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('flyer1')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 6: Canva Open House Flyer -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">06</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Open House Flyer</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Open House promotional flyer featuring schedule dates, property highlights, and direct contact details.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('flyer2')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 7: Buyer Lead Tracker Spreadsheet -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">07</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Buyer Lead Tracker</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Structured CRM spreadsheet tracking client budgets, preferred neighborhoods, listing addresses, and agent details.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('tracker')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item 8: Single-Family Home Listing -->
+                <div class="bg-stone-50 border border-stone-200 rounded-2xl overflow-hidden group hover:border-amber-600/50 hover:shadow-lg transition flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">08</div>
+                        <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-700 transition">Single-Family Listing</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Comprehensive property presentation featuring room specifications, pricing, fees, and photo galleries.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <button onclick="openModal('listing')" class="w-full py-2.5 rounded-xl bg-white hover:bg-amber-600 hover:text-white border border-stone-300 text-stone-800 text-xs font-semibold transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-eye"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION SECTION -->
+    <section id="experience" class="py-20 bg-stone-50 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Experience & Education</h2>
+                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Professional Experience -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-amber-600"></i> Professional Background
+                    </h3>
+                    
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
+                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">October 2026 – November 2026</span>
+                        <h4 class="text-lg font-bold text-stone-900">Real Estate Virtual Assistant (Trainee)</h4>
+                        <p class="text-sm font-medium text-stone-700">Sync2VA Training Program</p>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Executed simulated real estate workflows including property lookup, CMA comparative research, MLS data entry, tenant screening reports, and digital marketing flyers.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
+                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">2025 – 2026</span>
+                        <h4 class="text-lg font-bold text-stone-900">Small Business Owner & Operations Manager</h4>
+                        <p class="text-sm font-medium text-stone-700">Computer Shop & Piso Wi-Fi Business</p>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Handled client communications, technical troubleshooting, network hardware maintenance, database stability, and high-accuracy recordkeeping.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education & Training -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-stone-900 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-amber-600"></i> Education & Certification
+                    </h3>
+
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
+                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">September 2026 – October 2026</span>
+                        <h4 class="text-lg font-bold text-stone-900">Real Estate Virtual Assistant Training</h4>
+                        <p class="text-sm font-medium text-stone-700">Sync2VA Program</p>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Specialized training in Real Estate Administrative Operations, CRM Maintenance, Transaction Coordination Workflows, and SOP Compliance.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3 relative border-l-4 border-l-amber-600 shadow-sm">
+                        <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">College Degree</span>
+                        <h4 class="text-lg font-bold text-stone-900">Bachelor of Science in Political Science</h4>
+                        <p class="text-sm font-medium text-stone-700">North Eastern Mindanao State University, Tandag, Philippines</p>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Built strong analytical, organizational, communication, and document preparation foundations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELEGANT CONTACT SECTION (No form) -->
+    <section id="contact" class="py-20 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <h2 class="text-3xl sm:text-4xl font-serif-elegant font-bold text-stone-900">Get in Touch</h2>
+                <div class="w-16 h-0.5 bg-amber-600 mx-auto"></div>
+                <p class="text-stone-600 text-base">
+                    Looking for a reliable Real Estate Virtual Assistant? Reach out directly via any of the channels below.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <a href="mailto:aubreybinarao97@gmail.com" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Email</span>
+                    <span class="block text-sm font-bold text-stone-900 break-all">aubreybinarao97@gmail.com</span>
+                </a>
+
+                <a href="tel:09631832618" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Phone</span>
+                    <span class="block text-sm font-bold text-stone-900">09631832618</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/aubreybinaraova" target="_blank" class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3 hover:border-amber-600 hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto group-hover:bg-amber-600 group-hover:text-white transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">LinkedIn</span>
+                    <span class="block text-sm font-bold text-stone-900">aubreybinaraova</span>
+                </a>
+
+                <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="block text-xs font-semibold text-stone-500 uppercase tracking-wider">Location</span>
+                    <span class="block text-sm font-bold text-stone-900">Tandag, Philippines</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-navyDark border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-                <p>© 2026 Aubrey Anne Pacillos Binarao. All Rights Reserved.</p>
-            </div>
-            <div class="flex items-center gap-4 text-slate-400">
-                <a href="mailto:aubreybinarao97@gmail.com" class="hover:text-amberGold"><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:09631832618" class="hover:text-amberGold"><i class="fa-solid fa-phone"></i></a>
-                <a href="https://www.linkedin.com/in/aubreybinaraova/" target="_blank" rel="noopener noreferrer" class="hover:text-amberGold"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+    <footer class="py-8 bg-stone-900 text-stone-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Aubrey Anne P. Binarao. All rights reserved.</p>
+            <p class="text-xs text-amber-500">Real Estate Virtual Assistant Portfolio</p>
         </div>
     </footer>
 
-    <!-- INTERACTIVE SAMPLE MODAL DIALOG CONTAINER -->
-    <div id="sample-modal" class="fixed inset-0 z-50 bg-navyDark/90 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
-        <div class="bg-navyCard border border-slate-700 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar p-6 sm:p-8 relative space-y-6 shadow-2xl">
-            <!-- Close Modal Button -->
-            <button onclick="closeModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-base transition-colors" aria-label="Close modal">
+    <!-- MODAL POPUP FOR PORTFOLIO SAMPLES -->
+    <div id="portfolio-modal" class="fixed inset-0 z-50 hidden bg-stone-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white border border-stone-200 max-w-2xl w-full rounded-3xl p-6 sm:p-8 relative space-y-6 max-h-[90vh] overflow-y-auto shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-stone-400 hover:text-stone-900 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-
-            <!-- Dynamic Modal Content Injection Target -->
-            <div id="modal-content-body"></div>
+            <div id="modal-content" class="space-y-4">
+                <!-- Populated dynamically via JS -->
+            </div>
         </div>
     </div>
 
-    <!-- TOAST NOTIFICATION CONTAINER -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white px-5 py-3 rounded-2xl shadow-2xl text-xs font-semibold flex items-center gap-3 transition-all duration-300 translate-y-20 opacity-0">
-        <i class="fa-solid fa-circle-check text-base"></i>
-        <span id="toast-message">Message sent successfully!</span>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC -->
+    <!-- SCRIPT FOR MOBILE MENU & MODALS -->
     <script>
         // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        // Portfolio Category Filter Logic
-        function filterPortfolio(category) {
-            const items = document.querySelectorAll('.portfolio-item');
-            const buttons = document.querySelectorAll('.filter-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-amberGold', 'text-white', 'shadow-lg');
-                btn.classList.add('text-slate-300', 'bg-navyCard');
-            });
-
-            event.target.classList.add('bg-amberGold', 'text-white', 'shadow-lg');
-            event.target.classList.remove('text-slate-300', 'bg-navyCard');
-
-            items.forEach(item => {
-                if(category === 'all' || item.classList.contains(category)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
-        }
-
-        // Detailed Work Sample Data Store
-        const modalData = {
-            sample1: {
-                title: "Brockton, MA Property Tax & Assessment Database",
-                badge: "Database Research",
-                content: `
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-xs text-slate-300">
-                            <span class="font-bold text-amberGold">Target Location:</span> Brockton, Massachusetts | <span class="font-bold text-amberGold">Source:</span> Massachusetts Property Map
-                        </div>
-                        <div class="overflow-x-auto border border-slate-800 rounded-2xl">
-                            <table class="w-full text-left text-[11px] text-slate-300">
-                                <thead class="bg-slate-900 text-slate-200 uppercase font-bold border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-3">Address</th>
-                                        <th class="p-3">Owner's Name</th>
-                                        <th class="p-3">Last Sale Price</th>
-                                        <th class="p-3">Building Style</th>
-                                        <th class="p-3">Total Value</th>
-                                        <th class="p-3">Parcel / MLS #</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800/60">
-                                    <tr><td class="p-3 font-semibold text-white">101 Thomas St</td><td class="p-3">SAINT LOTH GREGORY S</td><td class="p-3 text-emerald-400">$255,000</td><td class="p-3">7:RANCH SLAB</td><td class="p-3">$416,400</td><td class="p-3">72192142</td></tr>
-                                    <tr><td class="p-3 font-semibold text-white">109 Drew Av</td><td class="p-3">MONTEIRO MARIA D</td><td class="p-3 text-emerald-400">$1.00</td><td class="p-3">3:COLONIAL</td><td class="p-3">$450,100</td><td class="p-3">73379951</td></tr>
-                                    <tr><td class="p-3 font-semibold text-white">21 Stearns Ave</td><td class="p-3">BLANC ELIACIN BARBARA</td><td class="p-3 text-emerald-400">$490,000</td><td class="p-3">6:RANCH</td><td class="p-3">$424,800</td><td class="p-3">72945960</td></tr>
-                                    <tr><td class="p-3 font-semibold text-white">27 Regent Rd</td><td class="p-3">SCOLARO VINCENZO N</td><td class="p-3 text-emerald-400">$174,000</td><td class="p-3">7:RANCH SLAB</td><td class="p-3">$351,800</td><td class="p-3">159-383</td></tr>
-                                    <tr><td class="p-3 font-semibold text-white">8 N Quincy St</td><td class="p-3">PETERSON LOUIS</td><td class="p-3 text-emerald-400">$329,900</td><td class="p-3">3:COLONIAL</td><td class="p-3">$561,900</td><td class="p-3">159-357</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="text-xs text-slate-400 leading-relaxed">This data log represents high-accuracy property lookup, extracting municipal tax assessment data, building sqft ratios, and parcel numbers to empower direct-to-seller marketing campaigns.</p>
-                    </div>
-                `
+        // Portfolio Sample Data
+        const samples = {
+            mls: {
+                title: "MLS Listing Entry Draft",
+                category: "Property Listing & MLS Management",
+                desc: "Complete listing review setup in Carmichael, CA (95608). Features detailed property specifications ($2,250,000 list price, 4 beds, 6 baths, 4,194 sqft, 0.67 lot size), active MLS #226111165 status, interior/exterior amenities, and verified listing agent credentials.",
+                metrics: ["Active MLS #226111165", "$2,250,000 List Price", "Full Feature Tagging"]
             },
-            sample2: {
-                title: "Property Rentals Marketing Flyer (Oregon, USA)",
-                badge: "Canva Marketing Graphic",
-                content: `
-                    <div class="space-y-4 text-center">
-                        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-4 max-w-md mx-auto text-left">
-                            <div class="text-xs text-amberGold uppercase font-bold tracking-widest">OREGON, USA RENTALS</div>
-                            <h2 class="text-2xl font-serif font-bold text-white leading-tight">PROPERTY RENTALS</h2>
-                            <p class="italic text-slate-300 text-xs">"The perfect place to begin again. A home for what matters."</p>
-                            <div class="p-4 rounded-2xl bg-navyCard border border-slate-800 text-xs space-y-2">
-                                <div class="font-bold text-white">Modern Living Starts Here</div>
-                                <p class="text-slate-400">Discover a modern home designed for comfortable everyday living, featuring spacious interiors, functional spaces, and contemporary architectural style.</p>
-                            </div>
-                            <div class="flex items-center justify-between text-xs text-amberGold font-bold pt-2 border-t border-slate-800">
-                                <span><i class="fa-solid fa-phone mr-1"></i> +123-456-7890</span>
-                                <span><i class="fa-solid fa-globe mr-1"></i> reallygreatsite.com</span>
-                            </div>
-                        </div>
-                    </div>
-                `
+            search: {
+                title: "Property Search Data Research",
+                category: "Data Research & Property Lookup",
+                desc: "Target location property look-up database covering Brockton, MA. Systematically organizes street addresses, owner names, last sale prices and dates, building styles, valuations, parcel/MLS numbers, and lot sizes for client acquisition.",
+                metrics: ["Multi-column Property Tracking", "Valuation & Sales History", "Parcel & Lot Verification"]
             },
-            sample3: {
-                title: "4015 SW Western Blvd, Corvallis OR Spec Sheet",
-                badge: "Property Rental Showcase",
-                content: `
-                    <div class="space-y-4">
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-bold text-amberGold">Corvallis, OR 97333</span>
-                                <span class="text-lg font-serif font-bold text-emerald-400">$3,200 / MO</span>
-                            </div>
-                            <h3 class="text-xl font-serif font-bold text-white">Single-Family Home Feature Sheet</h3>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center py-2 text-xs">
-                                <div class="p-2.5 rounded-xl bg-navyCard border border-slate-800"><div class="font-bold text-white">4</div><div class="text-[10px] text-slate-400">Bedrooms</div></div>
-                                <div class="p-2.5 rounded-xl bg-navyCard border border-slate-800"><div class="font-bold text-white">2</div><div class="text-[10px] text-slate-400">Bathrooms</div></div>
-                                <div class="p-2.5 rounded-xl bg-navyCard border border-slate-800"><div class="font-bold text-white">1 Car</div><div class="text-[10px] text-slate-400">Garage</div></div>
-                                <div class="p-2.5 rounded-xl bg-navyCard border border-slate-800"><div class="font-bold text-red-400">Not Allowed</div><div class="text-[10px] text-slate-400">Pets</div></div>
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">Awesome single level home with central heating and air conditioning. Features 4 rooms including an en-suite master with walk-in closet, central office space, fenced yard with playhouse/storage shed.</p>
-                        </div>
-                    </div>
-                `
+            cma: {
+                title: "Comparable Market Analysis (CMA)",
+                category: "Comparable Research & Valuation",
+                desc: "Comprehensive market analysis for 4805 Warbler Way, Lynnview, KY 40213. Evaluates target property size, 3 comparable properties, adjustments, price per square foot ($199.57), estimated repair value ($18,540), ARV, and Estimated Market Value ($158,112.28).",
+                metrics: ["Estimated Market Value: $158,112.28", "3 Detailed Comps", "ARV & Repair Budgeting"]
             },
-            sample4: {
-                title: "Tenant Screening & Credit Risk Audit Matrix",
-                badge: "Applicant Audit",
-                content: `
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-xs text-slate-300">
-                            <span class="font-bold text-amberGold">Standard Criteria:</span> Credit 520+; Net Monthly Income $3,900+ (3x rent); 6-month employment history; clear criminal/eviction record.
-                        </div>
-                        <div class="space-y-3">
-                            <div class="p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-xs space-y-1">
-                                <div class="flex justify-between font-bold text-red-400"><span>1. Bonnie Adams</span><span>RESULT: DENIED</span></div>
-                                <p class="text-slate-300">Credit Score 505 (Below 520 threshold); Monthly Income $1,333.33 (Below $3,900 requirement); Employment history unverified.</p>
-                            </div>
-                            <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-xs space-y-1">
-                                <div class="flex justify-between font-bold text-amber-400"><span>2. Hank Mess</span><span>RESULT: DENIED / CHECK DETAILS</span></div>
-                                <p class="text-slate-300">Criminal records listed; 2 older landlord/tenant filings in 2018 & 2019; Missing income/credit documentation.</p>
-                            </div>
-                        </div>
-                    </div>
-                `
+            tenant: {
+                title: "Tenant Screening Report",
+                category: "Tenant Screening & Application Processing",
+                desc: "Applicant screening report verifying credit scores, monthly net income requirements (3x rent ratio), employment history, landlord feedback, and criminal/eviction records to protect property investments.",
+                metrics: ["Financial & Credit Verification", "Background & Eviction Check", "Clear Pass/Fail Decision Matrix"]
             },
-            sample5: {
-                title: "Carmichael, CA $2.25M MLS Listing Creation Draft",
-                badge: "MLS Portal Entry",
-                content: `
-                    <div class="space-y-4">
-                        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs font-bold text-amberGold">MLS # 226111165</span>
-                                <span class="text-xl font-serif font-bold text-emerald-400">$2,250,000</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">5508 Susan Way, Carmichael, CA 95608</h3>
-                            <div class="grid grid-cols-3 gap-2 text-center text-xs">
-                                <div class="p-2 bg-navyCard rounded-xl font-bold text-white">4 Beds</div>
-                                <div class="p-2 bg-navyCard rounded-xl font-bold text-white">6 Baths</div>
-                                <div class="p-2 bg-navyCard rounded-xl font-bold text-white">4,194 Sqft</div>
-                            </div>
-                            <div class="text-xs text-slate-300 space-y-1">
-                                <p>• <span class="font-bold text-white">Exterior Features:</span> Outdoor Kitchen, Outdoor Grill, Fire Pit, Private Pool (In Ground), Gas Heat.</p>
-                                <p>• <span class="font-bold text-white">Interior Features:</span> Luxury Vinyl Plank, Stone Flooring, Multiple Fireplaces, Granite Counters, Island w/ Sink, Soaking Tub.</p>
-                            </div>
-                        </div>
-                    </div>
-                `
+            flyer1: {
+                title: "Property Rental Marketing Flyer",
+                category: "Canva Digital Marketing",
+                desc: "Modern property rental flyer created in Canva. Features eye-catching property imagery, location tags, private viewing booking call-to-actions, and professional branding.",
+                metrics: ["Canva Graphic Design", "High-Converting Layout", "Direct Booking CTAs"]
             },
-            sample6: {
-                title: "Comparative Market Analysis (CMA) Worksheet - Lynnview, KY",
-                badge: "ARV & Market Valuation",
-                content: `
-                    <div class="space-y-4">
-                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 text-xs text-slate-300">
-                            <span class="font-bold text-amberGold">Target Property:</span> 4805 Warbler Way, Lynnview, KY 40213 (927 sqft, 3 Bed, 1 Bath, Built 1955)
-                        </div>
-                        <div class="overflow-x-auto border border-slate-800 rounded-2xl">
-                            <table class="w-full text-left text-[11px] text-slate-300">
-                                <thead class="bg-slate-900 text-slate-200 uppercase font-bold border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-3">Property</th>
-                                        <th class="p-3">Sqft</th>
-                                        <th class="p-3">Year Built</th>
-                                        <th class="p-3">Last Sold</th>
-                                        <th class="p-3">Price / Sqft</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800/60">
-                                    <tr class="bg-amberGold/10"><td class="p-3 font-bold text-amberGold">Target Property</td><td class="p-3">927.00</td><td class="p-3">1955</td><td class="p-3">$185,000</td><td class="p-3">$199.57</td></tr>
-                                    <tr><td class="p-3">Comp 1</td><td class="p-3">988.00</td><td class="p-3">1954</td><td class="p-3">$170,000</td><td class="p-3">$172.06</td></tr>
-                                    <tr><td class="p-3">Comp 2</td><td class="p-3">1,011.00</td><td class="p-3">1954</td><td class="p-3">$147,999</td><td class="p-3">$146.39</td></tr>
-                                    <tr><td class="p-3">Comp 3 (4911 Raven Rd)</td><td class="p-3">1,035.00</td><td class="p-3">1954</td><td class="p-3">$200,000</td><td class="p-3">$193.24</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3 text-xs">
-                            <div class="p-3 rounded-2xl bg-navyCard border border-slate-800"><span class="text-slate-400">Estimated Repair Value (ERV):</span> <span class="font-bold text-white">$18,540.00</span></div>
-                            <div class="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30"><span class="text-emerald-400 font-bold">Estimated Market Value:</span> <span class="font-bold text-white">$158,112.28</span></div>
-                        </div>
-                    </div>
-                `
+            flyer2: {
+                title: "Open House Promotional Flyer",
+                category: "Canva Marketing & Event Promotion",
+                desc: "Open House flyer designed for scheduled property showcases. Includes exact date and time (October 17, 2026), list price ($200,000), room specs, property description, and agent contact info.",
+                metrics: ["Open House Scheduling", "Mid-Century Ranch Highlight", "Agent Contact Integration"]
             },
-            sample7: {
-                title: "Open House Announcement Graphic - 4911 Raven Rd",
-                badge: "Promotional Graphic",
-                content: `
-                    <div class="space-y-4 max-w-md mx-auto text-center">
-                        <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-4 text-left">
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs font-bold text-amberGold uppercase">OPEN HOUSE</span>
-                                <span class="text-lg font-serif font-bold text-white">$200,000</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white">Modern Minimalist House</h3>
-                            <p class="text-xs text-slate-400"><i class="fa-solid fa-calendar mr-1"></i> October 17, 2026 | 1:00 - 4:00 PM</p>
-                            <p class="text-xs text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> 4911 Raven Rd, Lynnview, KY 40213</p>
-                            <div class="p-3 bg-navyCard rounded-2xl text-xs space-y-1">
-                                <p class="text-slate-300">Welcome home! Charming, meticulously well-maintained mid-century ranch starter home in historic Lynnview.</p>
-                            </div>
-                        </div>
-                    </div>
-                `
+            tracker: {
+                title: "Buyer Lead Tracker Spreadsheet",
+                category: "CRM & Lead Management",
+                desc: "Client pipeline tracker recording buyer names, budgets, preferred neighborhoods (e.g., Lincoln Square, Roosevelt Avenue), listing addresses, listing prices, square footage, and seller agent details.",
+                metrics: ["Pipeline Organization", "Buyer Budget Matching", "Brokerage & Agent Tracking"]
             },
-            sample8: {
-                title: "NYC High-Net-Worth Buyer Matching & CRM Log",
-                badge: "Lead & Property Matching",
-                content: `
-                    <div class="space-y-4">
-                        <div class="overflow-x-auto border border-slate-800 rounded-2xl">
-                            <table class="w-full text-left text-[11px] text-slate-300">
-                                <thead class="bg-slate-900 text-slate-200 uppercase font-bold border-b border-slate-800">
-                                    <tr>
-                                        <th class="p-3">Client Name</th>
-                                        <th class="p-3">Budget</th>
-                                        <th class="p-3">Preferred Area</th>
-                                        <th class="p-3">Matched Address</th>
-                                        <th class="p-3">Listing Price</th>
-                                        <th class="p-3">Brokerage</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800/60">
-                                    <tr><td class="p-3 font-bold text-white">NOAH STERLING</td><td class="p-3 text-emerald-400">$1,800,000</td><td class="p-3">Lincoln Square</td><td class="p-3">200 Riverside Blvd #25E</td><td class="p-3">$1,795,000</td><td class="p-3">Douglas Elliman</td></tr>
-                                    <tr><td class="p-3 font-bold text-white">MARCO DELUCA</td><td class="p-3 text-emerald-400">$1,300,000</td><td class="p-3">Flushing</td><td class="p-3">147-26 Roosevelt Ave #1C</td><td class="p-3">$839,000</td><td class="p-3">FIND Real Estate</td></tr>
-                                    <tr><td class="p-3 font-bold text-white">CHRISTINE HAWTHORNE</td><td class="p-3 text-emerald-400">$1,750,000</td><td class="p-3">Upper East Side</td><td class="p-3">501 East 79th St #5E</td><td class="p-3">$1,425,000</td><td class="p-3">Compass</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                `
+            listing: {
+                title: "Single-Family Home Listing Presentation",
+                category: "Listing Presentation & Property Details",
+                desc: "Detailed single-family home presentation featuring Corvallis, OR property specs, monthly rental pricing ($3,200/mo), 4 bedrooms, 2 bathrooms, 1 car garage, and pet policies.",
+                metrics: ["Rental/Sale Presentation", "Amenity Breakdown", "Pricing & Fee Structure"]
             }
         };
 
-        // Modal Open / Close Logic
-        function openModal(sampleKey) {
-            const data = modalData[sampleKey];
-            if(!data) return;
-
-            const modal = document.getElementById('sample-modal');
-            const body = document.getElementById('modal-content-body');
-
-            body.innerHTML = `
-                <div class="space-y-4">
-                    <div class="inline-block px-3 py-1 rounded-full bg-amberGold/10 border border-amberGold/30 text-amberGold text-xs font-bold uppercase tracking-wider">${data.badge}</div>
-                    <h2 class="text-2xl font-serif font-bold text-white">${data.title}</h2>
-                    <div class="pt-2 border-t border-slate-800">${data.content}</div>
+        function openModal(key) {
+            const item = samples[key];
+            const modalContent = document.getElementById('modal-content');
+            
+            modalContent.innerHTML = `
+                <div class="space-y-3">
+                    <span class="text-xs font-semibold text-amber-700 uppercase tracking-wider">${item.category}</span>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-stone-900">${item.title}</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">${item.desc}</p>
+                </div>
+                <div class="pt-4 border-t border-stone-200">
+                    <h4 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-3">Key Highlights</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${item.metrics.map(m => `<span class="px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 text-xs font-medium">${m}</span>`).join('')}
+                    </div>
+                </div>
+                <div class="pt-4 flex justify-end">
+                    <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-semibold transition">Close</button>
                 </div>
             `;
 
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+            document.getElementById('portfolio-modal').classList.remove('hidden');
         }
 
         function closeModal() {
-            const modal = document.getElementById('sample-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
+            document.getElementById('portfolio-modal').classList.add('hidden');
         }
 
-        // Close modal when clicking dark overlay background
-        document.getElementById('sample-modal').addEventListener('click', function(e) {
-            if(e.target === this) closeModal();
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('portfolio-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
         });
-
-        // Contact Form Submission Handler
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const toast = document.getElementById('toast');
-            toast.classList.remove('translate-y-20', 'opacity-0');
-
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 4000);
-
-            event.target.reset();
-        }
     </script>
 </body>
 </html>
